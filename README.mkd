@@ -1,0 +1,32 @@
+Introduction
+============
+
+It's a small tool that can help you chunk a huge sQL file into small chunks. it will be armed with more features later.
+
+Installation
+============
+
+Only Perl :)
+
+Usage
+=====
+	
+	perl Dagger.pl (then follow the steps below)
+
+  EragonJ@hax4.in[~/perl/sQL]: perl Dagger.pl 
+  Your input file (Like: \w*.sql)
+  >> Test.sql
+  Your output filename (P.S. Dont put '.sql' here)
+  >> 123
+  What's the size of each chunk ? (Like: 1024)
+  >> 1024
+
+Author
+======
+
+EragonJ@hax4.in 陳佳隆
+    
+*Email:* jack.xxlong@gmail.com
+      
+*Blog:* [Here](http://eragonj.hax4.in)
+
