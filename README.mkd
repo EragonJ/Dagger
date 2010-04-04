@@ -13,14 +13,6 @@ Usage
 	
 	perl Dagger.pl (then follow the steps below)
 
-EragonJ@hax4.in[~/perl/Dagger]: perl Dagger.pl 
-Your input file (Like: \w*.sql)
-&rt;&rt; Test.sql
-Your output filename (P.S. Dont put '.sql' here)
-&rt;&rt; 123
-What's the size of each chunk ? (Like: 1024)
-&rt;&rt; 1024
-
 Author
 ======
 
