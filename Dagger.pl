@@ -25,7 +25,6 @@
   # use slurp mode
   local $/; 
 
-
   # get the whole file ! because there is only 1 line, I store it as a scalar
   my $content = <IN>;
 
@@ -37,25 +36,15 @@
     $remainder = $3;
   }
 
-  $_ = $remainder;
   # split the remainder into sub SQLs
-  while(/(\(.*?\))(?:,|;)/sg)
+  while($remainder =~ /(\(.*?\))(?:,|;)/sg)
   {
     push @sql,$1;
   }
 
   for(my $i=0;$i<int($#sql/$size)+1;$i++)
   {
-    my @sub;
-
-    if(($i+1)==int($#sql/$size)+1)
-    {
-      @sub = @sql[$i*$size .. $#sql];
-    }
-    else 
-    {
-      @sub = @sql[$i*$size .. ($i+1)*$size - 1];
-    }
+    my @sub = splice(@sql,0,$size);
 
     # will be named like abc_0 , abc_1 ... etc
     $outfile = $output."_".$i.".sql";
